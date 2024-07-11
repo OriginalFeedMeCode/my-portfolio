@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import NavigationTransitionProvider from "@provider/NavigationTransitionProvider";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"]
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +15,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={mono.className}>
+        <header className="flex items-center gap-2">
+          <Link className="btn" href={"/"}>Home</Link>
+          <Link className="btn" href={"/about"}>About</Link>
+        </header>
+        <NavigationTransitionProvider>
+          {children}
+        </NavigationTransitionProvider>
+      </body>
     </html>
   );
 }
