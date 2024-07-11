@@ -24,8 +24,8 @@ const ScrollPercentage = () => {
     }, []);
 
     return (
-        <motion.div initial={{ opacity: 0, translateY: 100, rotate: -90 }} animate={{ opacity: 1, translateY: 0 }} transition={{ delay: 1, duration: .4, type: 'tween' }} className='text-xs fixed -right-9 bottom-24 h-max w-24  text-white mix-blend-difference '>
-            Scroll: {scrollPercentage < 10 && 0}{Math.round(scrollPercentage)}%
+        <motion.div initial={{ opacity: 0, translateY: 100, rotate: -90 }} animate={{ opacity: 1, translateY: 0 }} transition={{ delay: 1, duration: .4, ease: "linear" }} className='text-xs fixed -right-9 bottom-24 h-max w-24  text-white mix-blend-difference '>
+            Scroll: {scrollPercentage < 10 && 0}{scrollPercentage ? Math.round(scrollPercentage) : 0}%
         </motion.div>
     );
 };

@@ -17,7 +17,7 @@ const Page = ({ children }) => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1, ease: 'linear' }}
+            transition={{ delay: 1, duration: 0, ease: 'linear' }}
         >
             {children}
             <ScrollPercentage />

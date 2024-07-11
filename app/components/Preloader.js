@@ -138,14 +138,14 @@ const Preloader = ({ functionToCall }) => {
 
 
     return (
-        <div className='loading-screen fixed top-0 right-0 bg-white dark:bg-black w-screen h-[100svh] text-current cursor-wait'>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, delay: .3 }} className='loading-screen fixed top-0 right-0 bg-white dark:bg-black w-screen h-[100svh] text-current cursor-wait'>
             <div className='outer-circle fixed left-2 top-2 w-36 md:w-48 h-36 md:h-48 rounded-full border dark:border-gray-700 flex items-center justify-center'>
                 <div className=' inner-circle scale-0 w-1/2 h-1/2 rounded-full border dark:border-gray-700'></div>
-                <div className=' small-circle scale-0 w-1/4 h-1/4 absolute top-0 rounded-full border dark:border-gray-700'></div>
+                <div className=' small-circle scale-0 w-1/4 h-1/4 absolute top-0 rounded-full border-[2px] dark:border-gray-700'></div>
             </div>
-            <div className='px-2 border-y border-y-[0.5px] border-current top-4 md:top-[50px] right-4 md:right-[50px] text-gray-600 py-4 fixed text-end text-2xl md:text-3xl pointer-events-none w-[200px] md:w-[400px]'>
+            <div className='px-2 border-y-[0.5px] border-current top-4 md:top-[50px] right-4 md:right-[50px] text-gray-600 py-4 fixed text-end text-2xl md:text-3xl pointer-events-none w-[200px] md:w-[400px]'>
                 <AnimatePresence mode='wait' >
-                    <motion.h3 initial={{ opacity: 0, translateY: -10 }} animate={{ opacity: 1, translateY: 0 }} exit={{ opacity: 0, translateY: 10 }} key={index}>
+                    <motion.h3 initial={{ opacity: 0, translateY: -10, }} animate={{ opacity: 1, translateY: 0, delay: 0.3 }} exit={{ opacity: 0, translateY: 10 }} key={index}>
                         {words[index]}
                     </motion.h3>
                 </AnimatePresence>
@@ -187,7 +187,7 @@ const Preloader = ({ functionToCall }) => {
                     <div className="num">0</div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
