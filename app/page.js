@@ -1,14 +1,20 @@
-import Character from '@components/TextOnScroll/Character'
+import LinkPreview from '@components/LinkPreview'
 import Page from '@provider/Page'
 import React from 'react'
 
 const HomePage = () => {
-  const paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
   return (
     <Page>
       <div className='r-w'>
         <div className="h-[100svh]"></div>
-        <Character paragraph={paragraph} className={"text-2xl md:text-5xl"} />
+        <LinkPreview
+          imageSrc={"/LinkSrc.png"}
+          url="https://uingle.com"
+          className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500 g-t"
+        >
+
+          Uingle.com
+        </LinkPreview>
         <div className="h-[100svh]"></div>
       </div>
     </Page>

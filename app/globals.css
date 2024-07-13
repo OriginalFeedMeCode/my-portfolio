@@ -21,3 +21,9 @@
 .one{
   z-index: 1;
 }
+
+.g-t {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
