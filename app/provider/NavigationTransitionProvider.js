@@ -28,7 +28,7 @@ const NavigationTransitionProvider = ({ children }) => {
                 <AnimatePresence mode='wait'>
                     <motion.div key={pathName}>
                         <motion.div
-                            className='absolute top-0 z-10 left-0 w-screen h-[100svh] bg-black origin-bottom'
+                            className='absolute top-0 z-10 left-0 w-screen h-[100svh] bg-black dark:bg-white origin-bottom'
                             initial={{ scaleY: 0 }}
                             animate={{ scaleY: 0 }}
                             exit={{ scaleY: 1 }}
