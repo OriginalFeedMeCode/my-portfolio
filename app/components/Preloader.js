@@ -121,7 +121,6 @@ const Preloader = ({ functionToCall }) => {
         "Hola",
         "Bonjour",
         "Ciao",
-        "Konnichiwa",
         "Annyeong",
         "أسلم أ عليكم",
         "नमस्ते"
