@@ -17,10 +17,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={mono.className}>
-        <header className="flex items-center gap-2">
-          <Link className="btn" href={"/"}>Home</Link>
-          <Link className="btn" href={"/about"}>About</Link>
-        </header>
         <NavigationTransitionProvider>
           {children}
         </NavigationTransitionProvider>

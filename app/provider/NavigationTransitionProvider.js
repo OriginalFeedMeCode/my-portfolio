@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 const NavigationTransitionProvider = ({ children }) => {
-    const [preloader, setPreloader] = useState(true);
+    const [preloader, setPreloader] = useState(false);
     const pathName = usePathname();
 
     useEffect(() => {
