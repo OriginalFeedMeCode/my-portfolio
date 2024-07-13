@@ -45,7 +45,7 @@ const Cursor = () => {
     return (
         <>
             <div
-                className='hidden md:flex fixed w-20 h-20 rounded-full z-0 pointer-events-none border dark:border-gray-800'
+                className='hidden md:flex fixed w-20 h-20 rounded-full z-0 pointer-events-none border border-gray-300 dark:border-gray-700'
                 style={{ top: currentPosition.y, left: currentPosition.x, transform: 'translate(-50%, -50%)' }}
             ></div>
             <div
