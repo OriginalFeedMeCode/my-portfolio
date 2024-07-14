@@ -39,7 +39,7 @@ const NavigationTransitionProvider = ({ children }) => {
                             initial={{ scaleY: 1 }}
                             animate={{ scaleY: 0 }}
                             exit={{ scaleY: 0 }}
-                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                            transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         />
                         {children}
                     </motion.div>
