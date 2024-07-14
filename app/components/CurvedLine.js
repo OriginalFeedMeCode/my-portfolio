@@ -11,7 +11,7 @@ export default function CurvedLine() {
     }, [])
     const setPath = (progress) => {
         const width = window.innerWidth * 0.7;
-        path.current.setAttributeNS(null, "d", `M0 250 Q${width * x} ${250 + progress}, ${width} 250`)
+        path.current.setAttributeNS(null, "d", `M0 50 Q${width * x} ${50 + progress}, ${width} 50`)
     }
     const lerp = (x, y, a) => x * (1 - a) + y * a
     const manageMouseEnter = () => {
@@ -47,11 +47,11 @@ export default function CurvedLine() {
         progress = 0;
     }
     return (
-        <div className="flex flex-col items-end w-full">
+        <div className="flex flex-col w-full">
             <div className="h-[1px] relative w-full">
-                <div onMouseEnter={() => { manageMouseEnter() }} onMouseMove={(e) => { manageMouseMove(e) }} onMouseLeave={() => { manageMouseLeave() }} className="h-10 w-full relative -top-5 one hover:h-[500px] hover:-top[250px]"></div>
-                <svg className='w-full h-[500px] absolute -top-[250px]'>
-                    <path className='stroke-current fill-none' ref={path}></path>
+                <div className="h-10 w-full relative flex items-center justify-center one hover:h-20 " onMouseEnter={() => { manageMouseEnter() }} onMouseMove={(e) => { manageMouseMove(e) }} onMouseLeave={() => { manageMouseLeave() }} ></div>
+                <svg className='w-full h-10 md:h-28 absolute -top-10    '>
+                    <path className='dark:stroke-gray-800 stroke-gray-400  fill-none' ref={path}></path>
                 </svg>
             </div>
         </div >

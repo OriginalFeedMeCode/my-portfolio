@@ -8,3 +8,4 @@ export const daisyui = {
   themes: ["light", "black"],
   darkTheme: "black",
 }
+export const darkMode = ['class', '[data-theme="black"]']

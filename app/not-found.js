@@ -33,11 +33,10 @@ const NotFound = () => {
                             Oh no! It seems the page you're looking for has taken a vacation to the Digital Bermuda Triangle. Our team of tech wizards is summoning it back with some digital voodoo.
                         </CardItem>
                         <CardItem
-                            translateZ={20}
+                            translateZ={50}
                             as={Link}
                             href={"/"}
-                            target="__blank"
-                            className="btn btn-sm font-normal dark:text-white"
+                            className="btn btn-sm font-normal dark:text-white border border-current"
                         >
                             <Home size={18} /> Go to Home →
                         </CardItem>

@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import "./loco.css";
-import ScrollPercentage from '@components/ScrollPercentage';
 
 const Page = ({ children }) => {
 
@@ -15,12 +14,11 @@ const Page = ({ children }) => {
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1, ease: 'linear' }}
+            initial={{ opacity: 0, translateY: 30 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ delay: 1, duration: 1, ease: "backInOut" }}
         >
             {children}
-            <ScrollPercentage />
         </motion.div>
     );
 };
